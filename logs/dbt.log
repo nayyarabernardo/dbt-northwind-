@@ -25,3 +25,197 @@ Happy modeling!
 [0m22:48:57.118438 [debug] [MainThread]: Command `dbt init` succeeded at 22:48:57.118166 after 279.21 seconds
 [0m22:48:57.119276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd5036e2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd41aaa9e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efd41aaa6b0>]}
 [0m22:48:57.120158 [debug] [MainThread]: Flushing usage events
+[0m22:08:03.603181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7644bb58a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76438b2cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76438b2c50>]}
+
+
+============================== 22:08:03.608273 | 9ed7d719-07e8-4334-9d26-5e1db292aac5 ==============================
+[0m22:08:03.608273 [info ] [MainThread]: Running with dbt=1.5.3
+[0m22:08:03.609180 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/nayara/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m22:08:03.609805 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:08:03.610748 [debug] [MainThread]: Command `dbt run` failed at 22:08:03.610605 after 0.02 seconds
+[0m22:08:03.611174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7644bb58a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76438b2bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76438b2e30>]}
+[0m22:08:03.611635 [debug] [MainThread]: Flushing usage events
+[0m22:09:32.447548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0d1a58a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0bf75b70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0bf762c0>]}
+
+
+============================== 22:09:32.450561 | 3af26bc6-f86b-40f0-825b-2a9d349c9d8f ==============================
+[0m22:09:32.450561 [info ] [MainThread]: Running with dbt=1.5.3
+[0m22:09:32.451412 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/nayara/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m22:09:43.321076 [error] [MainThread]: Encountered an error:
+
+[0m22:09:43.382482 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/nayara/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/nayara/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nayara/.local/lib/python3.10/site-packages/dbt/cli/main.py", line 459, in init
+    results = task.run()
+  File "/home/nayara/.local/lib/python3.10/site-packages/dbt/task/init.py", line 288, in run
+    project_name = self.get_valid_project_name()
+  File "/home/nayara/.local/lib/python3.10/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/usr/lib/python3/dist-packages/click/termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "/usr/lib/python3/dist-packages/click/termui.py", line 150, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:09:43.384502 [debug] [MainThread]: Command `dbt init` failed at 22:09:43.384254 after 10.95 seconds
+[0m22:09:43.385322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0d1a58a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0bf76e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c0bf76e60>]}
+[0m22:09:43.386176 [debug] [MainThread]: Flushing usage events
+[0m22:09:57.555020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3e9ad8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3d77db40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3d77e290>]}
+
+
+============================== 22:09:57.558094 | f406dbcd-1293-4b63-8771-ca999f3d0582 ==============================
+[0m22:09:57.558094 [info ] [MainThread]: Running with dbt=1.5.3
+[0m22:09:57.558967 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/nayara/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m22:10:00.393117 [info ] [MainThread]: A project called projectdbtnorth already exists here.
+[0m22:10:00.394941 [debug] [MainThread]: Command `dbt init` succeeded at 22:10:00.394716 after 2.85 seconds
+[0m22:10:00.395818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3e9ad8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3d77ed70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3d77eb30>]}
+[0m22:10:00.396304 [debug] [MainThread]: Flushing usage events
+[0m23:32:00.678812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e6fa98a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e5d75ba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e5d762f0>]}
+
+
+============================== 23:32:00.683975 | a2b8f860-6fa6-4342-97dd-2f1eea3a4485 ==============================
+[0m23:32:00.683975 [info ] [MainThread]: Running with dbt=1.5.3
+[0m23:32:00.684827 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/nayara/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:32:49.194602 [info ] [MainThread]: A project called projectdbtnorth already exists here.
+[0m23:32:49.195693 [debug] [MainThread]: Command `dbt init` succeeded at 23:32:49.195547 after 48.53 seconds
+[0m23:32:49.196159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e6fa98a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e5d76dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe9e5d76b90>]}
+[0m23:32:49.196645 [debug] [MainThread]: Flushing usage events
+[0m23:34:20.599251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcda3bbd8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcda28b5b70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcda28b62c0>]}
+
+
+============================== 23:34:20.602319 | 703d5aff-52e0-4db1-97ef-9db20185c6c2 ==============================
+[0m23:34:20.602319 [info ] [MainThread]: Running with dbt=1.5.3
+[0m23:34:20.603172 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/nayara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:34:44.974545 [debug] [MainThread]: Starter project path: /home/nayara/.local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m23:39:52.671653 [info ] [MainThread]: Profile dbtproject written to /home/nayara/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:39:52.672662 [info ] [MainThread]: 
+Your new dbt project "dbtproject" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:39:52.673680 [debug] [MainThread]: Command `dbt init` succeeded at 23:39:52.673487 after 332.09 seconds
+[0m23:39:52.674193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcda3bbd8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd93eb26e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd93eb15a0>]}
+[0m23:39:52.674695 [debug] [MainThread]: Flushing usage events
+[0m23:43:22.353666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56de1a18a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56dcf69ae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56dcf6a230>]}
+
+
+============================== 23:43:22.356635 | 598d5bc0-4063-4ef6-9ab3-ce39f8a9c8fa ==============================
+[0m23:43:22.356635 [info ] [MainThread]: Running with dbt=1.5.3
+[0m23:43:22.357459 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/nayara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:43:22.358097 [info ] [MainThread]: dbt version: 1.5.3
+[0m23:43:22.358667 [info ] [MainThread]: python version: 3.10.12
+[0m23:43:22.359176 [info ] [MainThread]: python path: /usr/bin/python3
+[0m23:43:22.359674 [info ] [MainThread]: os info: Linux-6.2.0-33-generic-x86_64-with-glibc2.35
+[0m23:43:22.360178 [info ] [MainThread]: Using profiles.yml file at /home/nayara/.dbt/profiles.yml
+[0m23:43:22.360663 [info ] [MainThread]: Using dbt_project.yml file at /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+[0m23:43:22.361134 [info ] [MainThread]: Configuration:
+[0m23:43:23.041012 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:43:23.041767 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:43:23.042405 [info ] [MainThread]: Required dependencies:
+[0m23:43:23.042973 [debug] [MainThread]: Executing "git --help"
+[0m23:43:23.046379 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:43:23.046982 [debug] [MainThread]: STDERR: "b''"
+[0m23:43:23.047394 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:43:23.047959 [info ] [MainThread]: Connection:
+[0m23:43:23.048599 [info ] [MainThread]:   method: service-account
+[0m23:43:23.049101 [info ] [MainThread]:   database: dbt-modeling-406501
+[0m23:43:23.049636 [info ] [MainThread]:   schema: northwind
+[0m23:43:23.050134 [info ] [MainThread]:   location: US
+[0m23:43:23.050621 [info ] [MainThread]:   priority: interactive
+[0m23:43:23.051116 [info ] [MainThread]:   timeout_seconds: 200
+[0m23:43:23.051630 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:43:23.052134 [info ] [MainThread]:   execution_project: dbt-modeling-406501
+[0m23:43:23.052647 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:43:23.053155 [info ] [MainThread]:   job_retries: 1
+[0m23:43:23.053724 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:43:23.054256 [info ] [MainThread]:   job_execution_timeout_seconds: 200
+[0m23:43:23.054758 [info ] [MainThread]:   gcs_bucket: None
+[0m23:43:23.056174 [info ] [MainThread]: Registered adapter: bigquery=1.5.3
+[0m23:43:23.057075 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:43:23.057522 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:43:23.129156 [debug] [MainThread]: On debug: select 1 as id
+[0m23:43:25.721328 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-modeling-406501&j=bq:US:9f1681c4-3ee5-4481-a548-6b752a45261b&page=queryresults
+[0m23:43:25.722208 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:43:25.723126 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:43:25.723869 [info ] [MainThread]: Could not load dbt_project.yml
+
+[0m23:43:25.725016 [debug] [MainThread]: Command `dbt debug` failed at 23:43:25.724796 after 3.38 seconds
+[0m23:43:25.725709 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:43:25.726505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56de1a18a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56ce597670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56ce5976d0>]}
+[0m23:43:25.727440 [debug] [MainThread]: Flushing usage events
+[0m23:46:31.709987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a2a8d8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a185abc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a185aad0>]}
+
+
+============================== 23:46:31.714324 | c1db83f0-8d8b-4f2f-a797-a27b19853a37 ==============================
+[0m23:46:31.714324 [info ] [MainThread]: Running with dbt=1.5.3
+[0m23:46:31.715134 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/nayara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:46:31.715805 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:46:31.716711 [debug] [MainThread]: Command `dbt run` failed at 23:46:31.716575 after 0.02 seconds
+[0m23:46:31.717138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a2a8d8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a185add0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f37a185afb0>]}
+[0m23:46:31.717607 [debug] [MainThread]: Flushing usage events
+[0m20:23:39.154080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeafeb98a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeaebbacb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeaebbac50>]}
+
+
+============================== 20:23:39.159576 | d32c870c-22e1-4f81-90b2-be146d1cd65f ==============================
+[0m20:23:39.159576 [info ] [MainThread]: Running with dbt=1.5.3
+[0m20:23:39.160488 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/nayara/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m20:23:39.161174 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:23:39.162118 [debug] [MainThread]: Command `dbt run` failed at 20:23:39.161978 after 0.02 seconds
+[0m20:23:39.162587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeafeb98a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeaebbabc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efeaebbafb0>]}
+[0m20:23:39.163052 [debug] [MainThread]: Flushing usage events
+[0m20:25:11.572408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f22423a18a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2241172c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2241172bf0>]}
+
+
+============================== 20:25:11.575618 | e65f0e0b-a0ca-4a2d-95d6-a4488e77d556 ==============================
+[0m20:25:11.575618 [info ] [MainThread]: Running with dbt=1.5.3
+[0m20:25:11.576449 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/nayara/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m20:25:11.577118 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:25:11.578034 [debug] [MainThread]: Command `dbt run` failed at 20:25:11.577895 after 0.02 seconds
+[0m20:25:11.578462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f22423a18a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2241172b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2241172f50>]}
+[0m20:25:11.578908 [debug] [MainThread]: Flushing usage events
+[0m20:26:56.474389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4759d8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4636ec50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4636ebf0>]}
+
+
+============================== 20:26:56.477690 | 77efc69e-789e-4160-9e09-e40793a7bf49 ==============================
+[0m20:26:56.477690 [info ] [MainThread]: Running with dbt=1.5.3
+[0m20:26:56.478617 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/nayara/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m20:26:56.479247 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/nayara/Downloads/eng_dados/estudo/projetos/dbt-northwind-/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:26:56.480180 [debug] [MainThread]: Command `dbt run` failed at 20:26:56.480039 after 0.02 seconds
+[0m20:26:56.480647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4759d8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4636eb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d4636ef50>]}
+[0m20:26:56.481130 [debug] [MainThread]: Flushing usage events
